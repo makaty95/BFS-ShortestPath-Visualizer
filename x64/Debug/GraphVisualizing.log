@@ -1,5 +1,0 @@
-﻿  Source.cpp
-D:\VisualStudio22\PROJECTS\GraphVisualizing\GraphVisualizing\Source.cpp(143,16): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-D:\VisualStudio22\PROJECTS\GraphVisualizing\GraphVisualizing\Source.cpp(152,36): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-D:\VisualStudio22\PROJECTS\GraphVisualizing\GraphVisualizing\Source.cpp(482,25): warning C4305: 'argument': truncation from 'double' to 'const float'
-  GraphVisualizing.vcxproj -> D:\VisualStudio22\PROJECTS\GraphVisualizing\x64\Debug\GraphVisualizing.exe
