@@ -44,6 +44,3 @@ im making using C++ and SFML graphics library.`*
 >> - [x] Implementation of UIME.h file for UI components like buttons, textBoxes, ect..
 >> - [x] First stage debugging and fixing.
 >> - [ ] Optimizations for the first stage.
-
-
-
