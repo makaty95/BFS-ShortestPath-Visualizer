@@ -2,6 +2,13 @@
 *`this is the first version of the algorithm visualizer 
 im making using C++ and SFML graphics library.`*
 
+**Fast access**:
+1. [Some initial images inside project](#some-initial-screenshots)
+1. [Bugs](#bugs-faced-along-the-developement-process)
+1. [Developement steps](#steps-plannedmade-during-the-developement)
+1. [Road map](#road-map-to-the-complete-algorithm-visualizer-project)
+
+
 ---
 ## Programming languages/libraries used :
 > - C++.
@@ -38,9 +45,25 @@ im making using C++ and SFML graphics library.`*
 > - [x] Add checkbox for diagonal moving.
 > - [ ] complete all text alignment	functions in the Button class.
 
+---
+
 ## Road map to the complete Algorithm visualizer project
-> ## *First stage (BFS Algorithm)*
+> ## *Phase I (BFS Algorithm)*
 >> - [x] BFS implementation and visualizing.
 >> - [x] Implementation of UIME.h file for UI components like buttons, textBoxes, ect..
->> - [x] First stage debugging and fixing.
->> - [ ] Optimizations for the first stage.
+>> - [x] Phase I debugging and fixing.
+>> - [ ] Optimizations for phase I.
+> ## *Phase II (Dijkstra Algorithm)*
+>> - [ ] BFS implementation and visualizing.
+>> - [ ] Optimizations for phase II.
+
+---
+## Some initial screenShots :
+---
+
+![image1](./screens/Screenshot1.png)
+![image1](./screens/Screenshot2.png)
+![image1](./screens/Screenshot3.png)
+![image1](./screens/Screenshot4.png)
+![image1](./screens/Screenshot5.png)
+

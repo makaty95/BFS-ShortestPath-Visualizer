@@ -127,12 +127,10 @@ public:
 
 
 
-/// \brief simple label class.
-/// \param font the text font.
-/// \param _position the position of the label.
-/// \param textString the text of the label.
+
 class Label : public Text, public UIComponent {
 public:
+
 
 	Label(Font& font, Vector2f _position = { 0.f, 0.f }, string textString = " ");
 	

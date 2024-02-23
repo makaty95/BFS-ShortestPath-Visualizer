@@ -31,6 +31,7 @@ using namespace sf;
 
 /////////////////////////////////Utility///////////////////////////////////////
 
+const Vector2i screenSize({1280, 720});
 const Color graphTypeColors[4] = { Color::Black, Color::Green, Color::Red, Color::White };
 const enum class GraphType { WALL, START, END, NONE };
 GraphType toDraw = GraphType::NONE;
@@ -97,6 +98,7 @@ public:
 class Grid {
 
 private:
+
 	int dx[8] = { 1,0,-1,0,1,-1,1,-1 };
 	int dy[8] = { 0,1,0,-1,1,1,-1,-1 };
 	int width;
@@ -221,6 +223,14 @@ public:
 	void drawGrid(RenderWindow& window) {
 		for (int i = 0; i < height; i++) {
 			for (int j = 0; j < width; j++) {
+				///////////////////////////////////////////////////////////
+				/// // this part is totally temporary, colors are to be changed frequently.
+				if (grid[i][j].getFillColor() == Color::White) {
+					grid[i][j].setFillColor(Color(204, 204, 204));
+				}else if (grid[i][j].getFillColor() == Color::Cyan) {
+					grid[i][j].setFillColor(Color(31, 173, 255));
+				}
+				/////////////////////////////////////////////////////////
 				window.draw(grid[i][j]);
 			}
 		}
@@ -366,7 +376,6 @@ public:
 };
 
 
-Vector2i screenSize({1280, 720});
 int main() {
 
 	RenderWindow window(VideoMode(screenSize.x, screenSize.y), "BFS Visualizer (Alpha)");
@@ -380,7 +389,6 @@ int main() {
 	}
 
 	// UI
-
 
 	// panels
 	Panel dash_board(Vector2f(500.f, 600.f), Color(16, 155, 100), Vector2f(770.f, 10.f));
@@ -483,7 +491,7 @@ int main() {
 	dash_board.addComponent(checkDiagonal);
 	
 	//GRID
-	Grid grid(50, 40, 14.f, 1.f, Vector2f(10.f, 100.f));
+	Grid grid(50, 40, 14.f, 0.f, Vector2f(10.f, 100.f));
 
 	while (window.isOpen()) {
 		Event event;

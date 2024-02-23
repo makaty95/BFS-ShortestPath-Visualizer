@@ -1,7 +1,12 @@
 #include "UIME.h"
 
+/// <summary>
+/// Mouses the on.
+/// </summary>
+/// <param name="shape">The shape.</param>
+/// <param name="window">The window.</param>
+/// <returns></returns>
 bool mouseOn(Shape& shape, RenderWindow& window) {
-
 	if (shape.getGlobalBounds().contains({ (float)Mouse::getPosition(window).x, (float)Mouse::getPosition(window).y })) {
 		return 1;
 	}
@@ -12,7 +17,15 @@ bool mouseOn(Shape& shape, RenderWindow& window) {
 bool UIComponent::alreadyClicked = 0;
 
 //constructor
-Button::Button(Font& font, const Color& forColor, const Color& backColor, Vector2f position, string textString) : UIComponent(UIType::BUTTON) {	
+/// <summary>
+/// Initializes a new instance of the <see cref="Button"/> class.
+/// </summary>
+/// <param name="font">The font.</param>
+/// <param name="forColor">For color.</param>
+/// <param name="backColor">Color of the back.</param>
+/// <param name="position">The position.</param>
+/// <param name="textString">The text string.</param>
+Button::Button(Font& font, const Color& forColor, const Color& backColor, Vector2f position, string textString) : UIComponent(UIType::BUTTON) {
 	onHavor = false;
 	text.setScale({ 1.f, 1.f });
 	this->setText(textString);
@@ -34,8 +47,14 @@ Button::Button(Font& font, const Color& forColor, const Color& backColor, Vector
 
 
 //other functions
+/// <summary>
+/// Determines whether [is mouse contained] [the specified window].
+/// </summary>
+/// <param name="window">The window.</param>
+/// <returns>
+///   <c>true</c> if [is mouse contained] [the specified window]; otherwise, <c>false</c>.
+/// </returns>
 bool Button::isMouseContained(RenderWindow& window) {
-
 	if (body.getGlobalBounds().contains({ (float)Mouse::getPosition(window).x, (float)Mouse::getPosition(window).y })) {
 		return 1;
 	}
@@ -87,6 +106,13 @@ void Button::allignText(Allignement allignment) {
 		this->text.setPosition(Vector2f(btn_position.x + padding.x, btn_position.y + padding.y));
 	}
 }
+/// <summary>
+/// Determines whether the specified window is clicked.
+/// </summary>
+/// <param name="window">The window.</param>
+/// <returns>
+///   <c>true</c> if the specified window is clicked; otherwise, <c>false</c>.
+/// </returns>
 bool Button::isClicked(RenderWindow& window) {
 	if (mouseOn(body, window)) {
 
@@ -111,6 +137,9 @@ void Button::autoSetSize() {
 	body.setSize({ (float)2.0 * padding.x + text.getGlobalBounds().width ,(float)text.getGlobalBounds().height + 2.f * padding.y });
 }
 
+/// <summary>
+/// Relocates the text.
+/// </summary>
 void Button::relocateText() {
 	// to auto resize the button with the text
 	Vector2f btn_pos = this->getPosition(); // position of the button
