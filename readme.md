@@ -54,7 +54,7 @@ im making using C++ and SFML graphics library.`*
 >> - [x] Phase I debugging and fixing.
 >> - [ ] Optimizations for phase I.
 > ## *Phase II (Dijkstra Algorithm)*
->> - [ ] BFS implementation and visualizing.
+>> - [ ] Dijkstra implementation and visualizing.
 >> - [ ] Optimizations for phase II.
 
 ---
